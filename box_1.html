@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒子模型</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.box {
+			position: absolute;
+			border: 1px solid;
+		}
+		.box1 {
+			position: relative;
+			display: inline-block;
+			width: 150px;
+			height: 150px;
+			background: red;
+			margin: 20px;
+			padding: 10px;
+			z-index: 3;
+
+		}
+
+		.box1_1 {
+			position: absolute;
+			top: 150px;
+			left: 150px;
+			width: 150px;
+			height: 150px;
+			background: gray;
+			z-index: 5;
+		}
+		.box2 {
+			position: relative;
+			display: inline-block;
+			width: 150px;
+			height: 150px;
+			background: yellow;
+			margin: 20px;
+			z-index: 3;
+		}
+		.box2_2 {
+			position: absolute;
+			top: 0px;
+			left: 500px;
+			width: 150px;
+			height: 150px;
+			background: orange;
+		}
+		.box_father {
+			position: relative;
+			display: inline-block;
+			width: 150px;
+			height: 150px;
+			background: #666;
+			margin: 20px;
+			z-index: 6;
+		}
+		.box3 {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background: white;
+		}
+
+		.box_father2 {
+			position: relative;
+			width: 500px;
+			height: 500px;
+			margin: 20px;
+			background: blue;
+			z-index: 6;
+
+		}
+
+		.sticky_box{
+			position: sticky;
+			top: 90px;
+			width: 150px;
+			height: 150px;
+			background: green;
+		}
+
+		.box4 {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			margin: 20px;
+			background: gray;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+
+	<div class="box1">box1</div>
+	<div class="box1_1">box1_1</div>
+	<div class="box2">box2</div>
+	<div class="box2_2">box2_2</div>
+	<div class="box_father">
+		box_father1
+		<div class="box3">box3</div>
+	</div>
+
+	<div class="box_father2">
+		box_father2
+		<div class="sticky_box">
+			sticky_box
+		</div>
+	</div>
+
+	<div class="box4">box4</div>
+</div>
+</body>
+</html>
+
