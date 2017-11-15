@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>布局1-1</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			list-style: none;
+		}
+
+		.wrapper {
+			position: absolute;
+			width: 100%;
+			background: #666;
+		}
+
+		.header {
+			width: 80%;
+			height: 80px;
+			background: #333;
+
+			/*设置水平居中*/
+			margin: 30px auto 0px auto;
+		}
+		.header_title {
+			padding-top: 20px;
+    		margin-left: 40px;
+    		color: #f6f6f6;
+		}
+		.footer {
+			width: 80%;
+			height: 80px;
+			background: #333;
+			margin: 0px auto 30px auto;
+		}
+		.footer_span {
+			padding-top: 20px;
+    		margin-left: 40px;
+    		color: #f6f6f6;
+    		display: block;
+    		font-family: fantasy;
+		    font-style: oblique;
+		}
+
+		.content {
+			width: 80%;
+			background: #888;
+			margin: 0 auto;
+		}
+
+		.left {
+			display: inline-block;
+			width: 25%;
+			height: 800px;
+			background: #f6f6f6;
+			vertical-align: top;
+		}
+		.center {
+			display: inline-block;
+			width: 40%;
+			height: 800px;
+			background: #f6f6f6;
+			margin-right: 1.65%;
+			margin-left: 1.65%;
+			vertical-align: top;
+		}
+		.right {
+			display: inline-block;
+			width: 30%;
+			height: 800px;
+			background: #f6f6f6;
+			vertical-align: top;
+		}
+
+		.left ul {
+			margin-top: 20px;
+		}
+
+		.left li {
+			width: 90%;
+			height: 30px;
+			text-align: center;
+    		margin: 5px；
+		}
+
+		.left li a {
+			font-size: 16px;
+		    color: #555;
+		    text-decoration: none;
+		}
+		.left li a:hover {
+			color: #111;
+		}
+		.clickHere {
+			text-decoration: none;
+		    color: #444;
+		    font-weight: 900;
+		    margin: 30px auto 0 auto;
+		    display: block;
+		    width: 90%;
+		    height: 30px;
+		    text-align: center;
+		}
+		.clickHere:hover {
+			color: #111;
+		}
+
+		.paragraph {
+			width: 90%;
+			margin: 20px auto;
+		}
+
+		.paragraph h4 {
+			width: 90%;
+		    text-align: left;
+		    height: 40px;
+		    line-height: 40px;
+		    margin-bottom: 10px;
+		}
+
+		.paragraph p {
+			display: block;
+			margin: 12px 0;
+		    font-size: 16px;
+		    /*text-indent: 2em;*/
+		    text-shadow: 0px 0px 11px #666;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+		    <h2 class="header_title">Branding</span>
+	    </div>
+		<div class="content">
+			<div class="left">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Clients</a></li>
+					<li><a href="#">Case Studies</a></li>
+				</ul>
+
+				<a class="clickHere" href="#">Promo item goes here</a>
+			</div>
+			<div class="center">
+				<div class="paragraph">
+					<h4>Lorem ipsum dolor</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam eaque porro alias libero, quibusdam consectetur inventore itaque accusantium ratione reiciendis illum quod vel dolores praesentium recusandae iure aut delectus! Earum!</p>
+				</div>
+				<div class="paragraph">
+					<h4>Lorem ipsum dolor</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias consequuntur voluptatum hic eaque, architecto nostrum officiis, fuga, voluptas iure, assumenda unde illo veniam vitae rem. Corporis facilis, esse magni.</p>
+				</div>
+			</div>
+			<div class="right">
+				<div class="paragraph">
+					<h4>Lorem ipsum dolor</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias consequuntur voluptatum hic eaque, architecto nostrum officiis, fuga, voluptas iure, assumenda unde illo veniam vitae rem. Corporis facilis, esse magni.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias consequuntur voluptatum hic eaque, architecto nostrum officiis, fuga, voluptas iure, assumenda unde illo veniam vitae rem. Corporis facilis, esse magni.</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer"><span class="footer_span">Footer</span></div>
+	</div>
+</body>
+</html>
