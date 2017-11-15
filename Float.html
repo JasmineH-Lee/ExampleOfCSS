@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文字环绕图片</title>
+	<style type="text/css">
+	    * {
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	    .news {
+	    	border: 1px solid black; 
+	    	/*float: left;*//*该元素的浮动会影响下一个元素*/
+	    	/*overflow: auto;*//*为了清除浮动*/
+	    }
+
+		.news img {
+			float: left;
+			width: 15%;
+			height: 200px;
+			margin: 10px;
+		}
+		.news p{
+			/*clear: left; */
+			/*表示该元素的哪个边不应该挨着浮动框*/
+			width: 80%;
+			float: right;
+		}
+		
+		.clear:after {
+			content: '';
+			height: 0;
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="news clear">
+		<img src="./img/IMG19.jpeg">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur id doloribus, quo repudiandae veritatis placeat alias modi, reprehenderit accusamus nobis adipisci velit culpa quisquam eum hic, iste quidem cum iure. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum commodi illo repudiandae perspiciatis in! Culpa, id officiis incidunt ullam nostrum quas perferendis laboriosam explicabo, itaque ipsa iure quibusdam provident iste!
+		</p>
+		<p class="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur id doloribus, quo repudiandae veritatis placeat alias modi, reprehenderit accusamus nobis adipisci velit culpa quisquam eum hic, iste quidem cum iure. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum commodi illo repudiandae perspiciatis in! Culpa, id officiis incidunt ullam nostrum quas perferendis laboriosam explicabo, itaque ipsa iure quibusdam provident iste!
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur id doloribus, quo repudiandae veritatis placeat alias modi, reprehenderit accusamus nobis adipisci velit culpa quisquam eum hic, iste quidem cum iure. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum commodi illo repudiandae perspiciatis in! Culpa, id officiis incidunt ullam nostrum quas perferendis laboriosam explicabo, itaque ipsa iure quibusdam provident iste!</p>
+		<!--<br class="clear">-->
+    </div>
+</body>
+</html>
