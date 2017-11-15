@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>居中</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			width: 200px;
+			height: 80px;
+			background: #999;
+			border: 1px solid #111;
+			position: relative;
+		}
+		p{
+			text-align: center;
+			line-height: 80px;
+		}
+		.box .content1 {
+			width: 100px;
+		    height: 30px;
+		    position: absolute;
+		    transform: translate(50%, 90%);	
+		}
+		.box .content2 {
+			width: 100px;
+		    height: 30px;
+		    position: absolute; /*fixed视口居中*/
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    margin: auto;
+		}
+		.box .content3 {
+			width: 100px;
+		    height: 30px;
+		    position: absolute; /*fixed视口居中*/
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    margin: auto;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>Lorem ipsum</p>
+	</div>
+	<div class="box">
+		<div class="content1">lorem ipsum</div>
+	</div>
+	<div class="box">
+		<div class="content2">lorem ipsum</div>
+	</div>
+	<div class="box">
+		<div class="content3">lorem ipsum</div>
+	</div>
+</body>
+</html>
