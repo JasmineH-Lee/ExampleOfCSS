@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			height: 500px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.triangle {
+			display: flex;
+			height: 0;
+			width: 0;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-bottom: 100px solid #666;
+
+			/*动画*/
+			transition: border-bottom 0.5s linear 0s,
+			            transform 0.5s linear 0s;
+		}
+		.triangle:hover {
+			border-bottom: 100px solid #f66; 
+			transform: rotate(360deg);
+		}
+		.square {
+			width: 100px;
+			height: 100px;
+			background: linear-gradient(to bottom, #333, #999);
+
+			transition: width 1s, height 1s 1s;
+		}
+		.square:hover {
+			width: 200px;
+			height: 200px;
+			background: #f99;
+		}
+		.circle {
+			width: 100px;
+			height: 100px;
+			background: radial-gradient(#f6f6f6, #f66);
+			border-radius: 50%;
+		}
+		.square2 {
+			width: 100px;
+			height: 100px;
+			background: linear-gradient(to right, red, orange, yellow, green, blue);
+		}
+		.square2:hover {
+			animation: colors 1s forwards;
+		}
+
+		@keyframes colors {
+			0% { width: 100px; }
+			100% { width: 200px;}
+		}
+ 
+
+	</style>
+</head>
+<body>
+	<div class="triangle"></div>
+	<div class="square"></div>
+	<div class="circle"></div>
+	<div class="square2"></div>
+</body>
+</html>
