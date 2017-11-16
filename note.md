@@ -130,3 +130,34 @@ flex(grow shrink basis简写):
 align-self(单个项目对齐方式不同):auto | flex-start | flex-end | center | base-line | stretch;
 
 
+## CSS优先级
+
+0 标签选择器+ 伪类选择器
+
+1 类选择器
+
+2 ID选择器
+
+3 通用选择器 组合子 否定伪类
+
+4 内联样式
+
+!import 优先级虽高但是不要轻易使用
+
+Always 优化考虑使用样式规则的优先级而不是!import
+Only 在需要覆盖全站或者外部CSS的特定页面中使用
+Never 在全站使用!import
+Never 在插件中使用
+
+取而代之：
+
+1、更好的利用CSS级联属性
+
+2、使用更具体的规则
+
+
+## 文字溢出
+
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
